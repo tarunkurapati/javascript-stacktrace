@@ -68,7 +68,7 @@
 
     module("mode");
 
-    test("mode", function() {
+  //  test("mode", function() {
         expect(1);
         equals("chrome safari firefox ie other opera9 opera10a opera10b opera11".indexOf(pst.mode(UnitTest.fn.createGenericError())) >= 0, true);
     });
