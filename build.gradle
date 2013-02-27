@@ -109,7 +109,7 @@ task test(dependsOn: 'init') << {
 
 task jstd(type: Exec, dependsOn: 'init', description: 'runs JS tests through JsTestDriver') {
 	// Default to MacOS and check for other environments
-	def firefoxPath = '/Applications/Firefox.app/Contents/MacOS/firefox'
+	def firefoxPath = '/usr/bin/firefox'
 	if ("uname".execute().text.trim() != 'Darwin') {
 		firefoxPath = "which firefox".execute().text.trim()
 	}
