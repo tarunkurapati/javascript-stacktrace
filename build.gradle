@@ -114,7 +114,7 @@ task jstd(type: Exec, dependsOn: 'init', description: 'runs JS tests through JsT
 		firefoxPath = "which firefox".execute().text.trim()
 	}
 
-	commandLine = ['/usr/bin/env', 'DISPLAY=:1', 'java', '-jar', "test/lib/JsTestDriver-1.3.3d.jar", '--config', "test/jsTestDriver.conf", '--port', '4224', '--browser', firefoxPath, '--tests', 'all', '--testOutput', buildDir]
+	commandLine = ['/usr/bin/env', 'DISPLAY=:0', 'java', '-jar', "test/lib/JsTestDriver-1.3.3d.jar", '--config', "test/jsTestDriver.conf", '--port', '4224', '--browser', firefoxPath, '--tests', 'all', '--testOutput', buildDir]
 }
 
 task jsCoverage(type: Exec, dependsOn: 'jstd', description: 'JS code coverage with cobertura') {
