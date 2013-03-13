@@ -29,7 +29,7 @@ var RAL = RAL || {};
 // RAL.callQueue being undefined - it is defined elsewhere in the namespace
 // but outside this file.
 
-// RAL.callQueue = RAL.callQueue || [];
+ RAL.callQueue = RAL.callQueue || [];
 
 (function (window,undefined) {
     'use strict';
