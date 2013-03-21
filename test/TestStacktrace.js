@@ -540,7 +540,7 @@
     module("util");
 
     test("stringify", function() {
-        expect(500);
+        expect(5);
         equals(pst.stringifyArguments(["a", 1, {}, function() {
         }, undefined]), '"a",1,#object,#function,undefined');
         equals(pst.stringifyArguments([0, 1, 2, 3]), '0,1,2,3');
